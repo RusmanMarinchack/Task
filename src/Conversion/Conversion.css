@@ -1,0 +1,64 @@
+.converter{
+    padding-top: 100px;
+}
+
+.wrapper{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #171932;
+    box-shadow: 1px 1px 10px 0 #000;
+}
+
+.wrapper__title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.wrapper__item{
+    position: relative;
+}
+
+.wrapper__item select{
+    border: none;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    padding: 15px 10px;
+    color: #fff;
+}
+
+.wrapper__item select option{
+    background: #171932;
+}
+
+.wrapper__item input{
+    width: calc(100% - 73px);
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 14px 10px;
+    color: #fff;
+}
+
+.wrapper__item input:focus ~ label, 
+.wrapper__item input:not(:placeholder-shown) ~ label {
+    top: -6px;
+    left: 0;
+    font-size: 10px;
+}
+
+.wrapper__item label{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    transition: all 0.3s;
+}
