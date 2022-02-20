@@ -30,7 +30,7 @@ function Converter(props) {
                 inputTwo.current.value = (inputOne.current.value * 1.13).toFixed(2);
             }
             else if (selectTwo.current.value === 'UAH') {
-                inputTwo.current.value = (inputOne.current.value / props.currensy[32].rate).toFixed(2);
+                inputTwo.current.value = (inputOne.current.value * props.currensy[32].rate).toFixed(2);
             }
             else {
                 inputTwo.current.value = inputOne.current.value;
@@ -41,7 +41,7 @@ function Converter(props) {
                 inputTwo.current.value = (inputOne.current.value * 0.88).toFixed(2);
             }
             else if (selectTwo.current.value === 'UAH') {
-                inputTwo.current.value = (inputOne.current.value / props.currensy[26].rate).toFixed(2);
+                inputTwo.current.value = (inputOne.current.value * props.currensy[26].rate).toFixed(2);
             }
             else {
                 inputTwo.current.value = inputOne.current.value;
@@ -107,7 +107,7 @@ function Converter(props) {
                 <div className="wrapper__item">
                     <input type="number" className="input" onInput={valueInpetOne} ref={inputOne} placeholder={' '}/>
                     <label>Валюта</label>
-                    <select className="select" ref={selectOne}>
+                    <select className="select" onInput={valueInpetTwo} ref={selectOne}>
                         <option value="UAH">UAH</option>
                         <option value="EUR">EUR</option>
                         <option value="USD">USD</option>
@@ -116,7 +116,7 @@ function Converter(props) {
                 <div className="wrapper__item" >
                     <input type="number" className="input" onInput={valueInpetTwo} ref={inputTwo} placeholder={' '} />
                     <label>Валюта</label>
-                    <select className="select2" ref={selectTwo}>
+                    <select className="select2" onInput={valueInpetOne} ref={selectTwo}>
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                         <option value="UAH">UAH</option>
